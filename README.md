@@ -1,3 +1,5 @@
+** I checked it in arukas**
+
 # v2ray-openshift-all-in-one
 
 **IMPORTANT: This project violates the Services Agreement and Acceptable Use Policy which contains 'Network Proxy' and can be found [here](https://openshift.redhat.com/app/legal/). You should know WHAT YOU ARE DOING and get ready for bearing ALL THE CONSEQUENCES ARISING THEREFROM.**

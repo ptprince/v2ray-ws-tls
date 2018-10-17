@@ -1,9 +1,9 @@
 from nginx:latest
 
-ENV CLIENT_ID "38c9e20b-f90f-4bc6-a909-fa2b10917925"
+ENV CLIENT_ID "00000000-0000-0000-0000-000000000000"
 ENV CLIENT_ALTERID 64
 ENV CLIENT_SECURITY aes-128-gcm
-ENV VER=3.5
+ENV VER=3.47
 
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
@@ -13,7 +13,7 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends wget unzip php-fpm php-curl php-cli php-mcrypt php-mysql php-readline
 
 RUN wget --no-check-certificate -O v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
-	&& unzip v2ray.zip \
+	&& unzip v2ray.zip -d v2ray-v$VER-linux-64\
 	&& mv ./v2ray-v$VER-linux-64/v2ray /usr/local/bin/ \
 	&& mv ./v2ray-v$VER-linux-64/v2ctl /usr/local/bin/ \
 	&& chmod 777 /usr/local/bin/v2ctl \
